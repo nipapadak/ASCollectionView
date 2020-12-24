@@ -502,7 +502,7 @@ public struct ASCollectionView<SectionID: Hashable>: UIViewControllerRepresentab
 		{
 			if let scrollPositionToSet = parent.scrollPositionSetter?.wrappedValue
 			{
-				scrollToPosition(scrollPositionToSet, animated: animated)
+				scrollToPosition(scrollPositionToSet, animated: true)
 				DispatchQueue.main.async
 				{
 					self.parent.scrollPositionSetter?.wrappedValue = nil
